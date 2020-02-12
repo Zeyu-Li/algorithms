@@ -8,14 +8,14 @@ class Stack:
     
     def __str__(self):
         """ overloads print """
-        stackAsString = ''
+        stackAsString = '<Queue>: ['
         if len(self.items) == 0:
             return ''
         elif len(self.items) == 1:
-            return self.items
+            return self.items[0]
         for item in self.items:
-            stackAsString += str(item) + ' '
-        return stackAsString
+            stackAsString += str(item) + ', '
+        return stackAsString[:-2] + "]"
     
     def define(self, items):
         """ defines stack 
