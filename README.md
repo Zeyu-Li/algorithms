@@ -2,9 +2,23 @@
 
 ## About
 
-This is a collection of algorithms and formulas written in different programing languages
+This is a collection of algorithms, formulas, or  written in different programing languages
 
+## ADT
 
+* Stack [O(1) constant]
+* Bounded Queues [O(n) linear time]
+* Circular Queues [O(1) constant]
+
+The next two have a node (SLinkedListNode or DLinkedListNode) and the implementation (SLinkedList or DLinkedList)
+
+* Singly Linked List [O(n) linear time] 
+* Doubly Linked List [O(n) linear time] 
+
+## Algorithms
+
+* GCD (greatest common denominator) by Euclidean algorithm
+* LCM (least common multiple) uses GCD
 
 ## How to Use
 

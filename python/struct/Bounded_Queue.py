@@ -1,4 +1,4 @@
-""" Queues, by: Zeyu Li """
+""" Bounded Queues, by: Zeyu Li """
 
 
 class Queue:
