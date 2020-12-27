@@ -26,13 +26,16 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * Stack
 * Queue
 * Priority Queue
-* Lists (Vectors)
+* Vectors
+* Lists (similar to Vectors)
 * Sets
 * Heaps
+* Sorting O(nlog(n))
 
 **Mine**
 
 * 
+* Graphs
 
 
 
@@ -46,6 +49,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 ### C++
 
 * GCD via Euclidean algorithm
+* BFS O(log(V+E))
 
 
 
