@@ -34,8 +34,8 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 **Mine**
 
-* 
-* Graphs
+* Binary Tree (has template class)
+* Graphs (TODO)
 
 
 
@@ -51,7 +51,13 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * GCD via Euclidean algorithm
 * BFS O(log(V+E))
 
+### Go
 
+* Is prime
+
+### TypeScript
+
+* Is prime
 
 ## Concepts
 
