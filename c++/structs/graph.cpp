@@ -1,40 +1,60 @@
+// regular graph representation as a array of pairs (source and desinations) and the weight
+// https://gist.github.com/MagallanesFito/791f736a0d21708794aafa11a0416201
+#include <iostream>
 #include <vector>
+#include <utility>
 
 class Graph {
-    int capacity;
+    private:
+        int V, E;
 
-    // pointer to vector containing adjacency list
-    std::vector<int> *connecting;
+        // pointer to vector containing adjacency list
+        std::vector<std::pair<int, std::pair<int, int>>> edges;
     public:
-        // contructor with max nodes in graph
-        Graph(int capacity);
-        // destructor
-        ~Graph();
+        // contructor
+        Graph();
+        Graph(int V, int E);
+        // destructor not needed
+        // ~Graph();
 
-        // adds an edge to graph
+        // adds an edge to graph, default weight 1
         void add_edge(int start, int end);
+        // overloads with weight
+        void add_edge(int start, int end, int weight);
 
-        // print graph to iostream
+        // print graph to iostream (connection then weight in brackets)
         void print();
 };
 
-Graph::Graph(int capacity) {
-    this->capacity = capacity;
-
-    // allocs for new graph
-    connecting = new std::vector<int>[capacity];
+Graph::Graph(int V, int E) {
+    this->V = V;
+    this->E = E;
 }
-
-Graph::~Graph() {
-    delete[] connecting;
+Graph::Graph() {
+    V = 0;
+    E = 0;
 }
 
 void Graph::add_edge(int start, int end) {
-    connecting[start].push_back(end);
+    edges.push_back({1, {start, end}});
+}
+void Graph::add_edge(int start, int end, int weight) {
+    edges.push_back({weight, {start, end}});
 }
 
 void Graph::print(void) {
-    for (auto connection: this->connecting) {
-
+    std::vector<std::pair<int, std::pair<int, int>>>::iterator it;
+    for(it = edges.begin();it!=edges.end();it++){
+        std::cout << it->second.first << " - " << it->second.second << " (" << it->first << ")" << std::endl;
     }
 }
+
+int main() {
+    Graph graph;
+
+    graph.add_edge(2, 4,10);
+    graph.add_edge(4,3);
+    graph.print();
+    return 0;
+}
+
