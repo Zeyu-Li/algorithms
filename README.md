@@ -35,9 +35,12 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 **Mine**
 
 * Binary Tree (has template class)
+* Hash Table
 * Graphs
   * Matrix representation
-  * 
+  * List/Hash-like table representation
+  * Connected nodes
+* 
 
 
 
@@ -54,6 +57,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * GCD via Euclidean algorithm
 * LCM (least common multiple) uses GCD
 * BFS O(log(V+E))
+* Strassen's Matrix
 
 ### Go
 
