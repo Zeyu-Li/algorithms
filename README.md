@@ -51,13 +51,14 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * GCD (greatest common denominator) by Euclidean algorithm
 * LCM (least common multiple) uses GCD
 * Pi Approximator via Monte Carlo
+* Matrix Multiplication O(n^3)
+* Strassen's Matrix Multiplication ~O(n^2.81) (less precise than the one above)
 
 ### C++
 
 * GCD via Euclidean algorithm
 * LCM (least common multiple) uses GCD
 * BFS O(log(V+E))
-* Strassen's Matrix Multiplication (for naive solution in O(n^3) see https://github.com/Zeyu-Li/matrix_multiplication)
 
 ### Go
 
