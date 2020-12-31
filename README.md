@@ -57,7 +57,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * GCD via Euclidean algorithm
 * LCM (least common multiple) uses GCD
 * BFS O(log(V+E))
-* Strassen's Matrix
+* Strassen's Matrix Multiplication (for naive solution in O(n^3) see https://github.com/Zeyu-Li/matrix_multiplication)
 
 ### Go
 

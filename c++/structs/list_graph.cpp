@@ -17,6 +17,8 @@ class Graph_l {
         Graph_l(bool, int);
         // overloads main contructor, default undirected
         Graph_l(int);
+        // destructor
+        ~Graph_l();
 
         // add edge
         void add_edge(int source, int destination);
@@ -41,6 +43,9 @@ Graph_l::Graph_l(bool dir, int v) {
     directed = dir;
     size = v;
     adj = new std::vector<int>[v];
+}
+Graph_l::~Graph_l() {
+    delete[] adj;
 }
 
 void Graph_l::add_edge(int source, int destination) {

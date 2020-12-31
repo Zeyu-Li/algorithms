@@ -20,6 +20,8 @@ class Hash_table {
     public:
     // contructor, n is number of rows
     Hash_table(int n);
+    // destructor
+    ~Hash_table();
 
     void insert_item(int item);
     // inserting an array of numbers given size and array
@@ -37,6 +39,9 @@ class Hash_table {
 Hash_table::Hash_table(int n) {
     size = n;
     table = new std::list<int>[n];
+}
+Hash_table::~Hash_table() {
+    delete[] table;
 }
 // insert item via hash func
 void Hash_table::insert_item(int item) {
