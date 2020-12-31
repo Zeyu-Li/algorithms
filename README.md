@@ -35,7 +35,9 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 **Mine**
 
 * Binary Tree (has template class)
-* Graphs (TODO)
+* Graphs
+  * Matrix representation
+  * 
 
 
 
@@ -45,10 +47,12 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 * GCD (greatest common denominator) by Euclidean algorithm
 * LCM (least common multiple) uses GCD
+* Pi Approximator via Monte Carlo
 
 ### C++
 
 * GCD via Euclidean algorithm
+* LCM (least common multiple) uses GCD
 * BFS O(log(V+E))
 
 ### Go
