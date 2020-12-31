@@ -4,12 +4,14 @@
 #include <vector>
 #include <utility>
 
+template<class T>
 class Graph {
     private:
+        // have no uses for now
         int V, E;
 
         // pointer to vector containing adjacency list
-        std::vector<std::pair<int, std::pair<int, int>>> edges;
+        std::vector<std::pair<T, std::pair<int, int>>> edges;
     public:
         // contructor
         Graph();
@@ -20,40 +22,45 @@ class Graph {
         // adds an edge to graph, default weight 1
         void add_edge(int start, int end);
         // overloads with weight
-        void add_edge(int start, int end, int weight);
+        void add_edge(int start, int end, T weight);
 
         // print graph to iostream (connection then weight in brackets)
         void print();
 };
 
-Graph::Graph(int V, int E) {
+template<class T>
+Graph<T>::Graph(int V, int E) {
     this->V = V;
     this->E = E;
 }
-Graph::Graph() {
+template<class T>
+Graph<T>::Graph() {
     V = 0;
     E = 0;
 }
 
-void Graph::add_edge(int start, int end) {
+template<class T>
+void Graph<T>::add_edge(int start, int end) {
     edges.push_back({1, {start, end}});
 }
-void Graph::add_edge(int start, int end, int weight) {
+template<class T>
+void Graph<T>::add_edge(int start, int end, T weight) {
     edges.push_back({weight, {start, end}});
 }
 
-void Graph::print(void) {
-    std::vector<std::pair<int, std::pair<int, int>>>::iterator it;
+template<class T>
+void Graph<T>::print(void) {
+    typename std::vector<std::pair<T, std::pair<int, int>>>::iterator it;
     for(it = edges.begin();it!=edges.end();it++){
         std::cout << it->second.first << " - " << it->second.second << " (" << it->first << ")" << std::endl;
     }
 }
 
 int main() {
-    Graph graph;
+    Graph<float> graph;
 
-    graph.add_edge(2, 4, 10);
-    graph.add_edge(4,3);
+    graph.add_edge(2, 4, 10.5);
+    graph.add_edge(4, 3);
     graph.print();
     return 0;
 }
