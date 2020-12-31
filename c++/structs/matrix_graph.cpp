@@ -77,7 +77,7 @@ void Graph_m::resize(int new_size) {
 }
 
 // add edge row then column
-void Graph_m::add_edge(int x, int y) {
+void Graph_m::add_edge(int y, int x) {
     // sets size as the max of x or y
     int max = x > y ? x : y;
     if (max>size) {
@@ -85,19 +85,19 @@ void Graph_m::add_edge(int x, int y) {
         // Resize
         resize(max);
     }
-    matrix[x][y] = 1;
+    matrix[y][x] = 1;
     // if undirected
-    if (!directed) matrix[y][x] = 1;
+    if (!directed) matrix[x][y] = 1;
 }
-void Graph_m::add_edge(int x, int y, int weight) {
+void Graph_m::add_edge(int y, int x, int weight) {
     // sets size as the max of x or y
     int max = x > y ? x : y;
     if (max>size) {
         size = max;
     }
-    matrix[x][y] = weight;
+    matrix[y][x] = weight;
     // if undirected
-    if (!directed) matrix[y][x] = weight;
+    if (!directed) matrix[x][y] = weight;
 }
 
 int Graph_m::get_size(void) {

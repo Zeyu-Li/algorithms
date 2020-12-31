@@ -86,7 +86,7 @@ void Graph_m<T>::resize(int new_size) {
 
 // add edge row then column
 template<class T>
-void Graph_m<T>::add_edge(int x, int y) {
+void Graph_m<T>::add_edge(int y, int x) {
     // sets size as the max of x or y
     int max = x > y ? x : y;
     if (max>size) {
@@ -94,20 +94,20 @@ void Graph_m<T>::add_edge(int x, int y) {
         // Resize
         resize(max);
     }
-    matrix[x][y] = 1;
+    matrix[y][x] = 1;
     // if undirected
-    if (!directed) matrix[y][x] = 1;
+    if (!directed) matrix[x][y] = 1;
 }
 template<class T>
-void Graph_m<T>::add_edge(int x, int y, T weight) {
+void Graph_m<T>::add_edge(int y, int x, T weight) {
     // sets size as the max of x or y
     int max = x > y ? x : y;
     if (max>size) {
         size = max;
     }
-    matrix[x][y] = weight;
+    matrix[y][x] = weight;
     // if undirected
-    if (!directed) matrix[y][x] = weight;
+    if (!directed) matrix[x][y] = weight;
 }
 
 template<class T>
@@ -128,7 +128,7 @@ void Graph_m<T>::print(void) {
 
 
 int main() {
-    Graph_m<float> graph(false, 5);
+    Graph_m<float> graph(true, 5);
     // std::cout << graph.get_size();
     graph.add_edge(3,2);
     graph.add_edge(2,1, 2.5);

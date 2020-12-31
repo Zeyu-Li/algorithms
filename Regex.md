@@ -27,5 +27,5 @@ Quantifiers:
 
 Sourced: https://github.com/CoreyMSchafer/code_snippets/blob/master/Regular-Expressions/snippets.txt
 
-\* note Captured group and be recombined with the **#** followed by the group number
+\* Note captured group and be recombined with the **#** followed by the group number
 
