@@ -4,8 +4,9 @@
 */ 
 #include <iostream>
 #include "../structs/binary_tree.cpp"
-#include "../structs/graph.cpp"
+#include "../structs/heap.cpp"
 #include "../structs/hash_table.cpp"
+#include "../structs/graph.cpp"
 #include "../structs/list_graph.cpp"
 #include "../structs/matrix_graph.cpp"
 using namespace std;
@@ -31,6 +32,16 @@ int main() {
     // tree->post_order(find);
 
     delete tree;
+
+    /* heap (very rudimentary) */
+    cout << "Heap:" << endl;
+    int arr[] = {1,5,7,3,68,4};
+    Min_heap heap;
+
+    heap.push_back(sizeof(arr)/sizeof(arr[0]), arr);
+    heap.push_back(4);
+    heap.pop_back();
+    heap.print();
 
     /* hash table */
     cout << "Hash table:" << endl;

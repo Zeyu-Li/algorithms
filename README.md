@@ -112,6 +112,10 @@ py name_of_program.py
 
 Needs to be complied (recommended gcc)
 
+### Usage
+
+Can be copied and pasted directly to the file or drag in the file and be include with `#include "NameOfFile.cpp"` header
+
 
 
 ## Licence
