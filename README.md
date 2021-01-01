@@ -40,7 +40,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
   * Matrix representation
   * List/Hash-like table representation
   * List of edges with weights
-* 
+* Heaps
 
 
 
