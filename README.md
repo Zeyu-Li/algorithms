@@ -39,7 +39,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * Graphs
   * Matrix representation
   * List/Hash-like table representation
-  * Connected nodes
+  * List of edges with weights
 * 
 
 
