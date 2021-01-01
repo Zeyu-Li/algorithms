@@ -190,28 +190,3 @@ node<Type> *Binary_tree<Type>::search(Type value, node<Type> *leaf) {
     
     return search(value, root);
 }
-
-
-int main()
-{
-    Binary_tree<float> tree;
-
-    // for best results, randomize inserts so the tree can be somewhat balanced
-    tree.insert(10.6);
-    tree.insert(5);
-    tree.insert(11.9);
-    tree.insert(47.3);
-    tree.insert(-0.0);
-
-    tree.pre_order();
-    tree.in_order();
-    tree.post_order();
-
-    // node<float> *find = tree.search(10);
-    // must set overload to public to do the thing below
-    // tree->post_order(find);
-
-    delete &tree;
-
-    return 0;
-}

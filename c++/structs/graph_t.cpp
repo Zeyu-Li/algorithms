@@ -55,13 +55,3 @@ void Graph<T>::print(void) {
         std::cout << it->second.first << " - " << it->second.second << " (" << it->first << ")" << std::endl;
     }
 }
-
-int main() {
-    Graph<float> graph;
-
-    graph.add_edge(2, 4, 10.5);
-    graph.add_edge(4, 3);
-    graph.print();
-    return 0;
-}
-

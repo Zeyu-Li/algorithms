@@ -96,7 +96,7 @@ def strassen_helper(matrix1, matrix2):
 def pp_matrix(matrix):
     # pretty prints matrix
     for row in matrix:
-        print(" ".join(map(str, row)))
+        print(", ".join(map(str, row)))
 
 def main():
     # debug

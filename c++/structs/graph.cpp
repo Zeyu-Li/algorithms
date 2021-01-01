@@ -48,13 +48,3 @@ void Graph::print(void) {
         std::cout << it->second.first << " - " << it->second.second << " (" << it->first << ")" << std::endl;
     }
 }
-
-int main() {
-    Graph graph;
-
-    graph.add_edge(2, 4, 10);
-    graph.add_edge(4,3);
-    graph.print();
-    return 0;
-}
-

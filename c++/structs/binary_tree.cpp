@@ -177,28 +177,3 @@ node *Binary_tree::search(int value, node *leaf) {
     
     return search(value, root);
 }
-
-
-int main()
-{
-    Binary_tree *tree = new Binary_tree();
-
-    // for best results, randomize inserts so the tree can be somewhat balanced
-    tree->insert(10);
-    tree->insert(5);
-    tree->insert(11);
-    tree->insert(47);
-    tree->insert(0);
-
-    tree->pre_order();
-    tree->in_order();
-    tree->post_order();
-
-    node *find = tree->search(10);
-    // must set overload to public to do the thing below
-    // tree->post_order(find);
-
-    delete tree;
-
-    return 0;
-}

@@ -78,22 +78,6 @@ void Hash_table::print() {
     }
 }
 
-
 int Hash_table::get_size() {
     return size;
-}
-
-int main() {
-    Hash_table table(3);
-
-    int a[] = {2,5,7,3,7,3,5,2,6,3};
-    int size = sizeof(a)/sizeof(a[0]);
-
-    table.insert_items(size, a);
-    table.delete_item(7);
-
-    // prints
-    table.print();
-
-    return 0;
 }

@@ -113,15 +113,3 @@ void Graph_m::print(void) {
         std::cout << std::endl;
     }
 }
-
-
-int main() {
-    Graph_m graph(false, 5);
-    // std::cout << graph.get_size();
-    graph.add_edge(3,2);
-    graph.add_edge(2,1, 5);
-
-    graph.print();
-    // std::cout << graph.matrix[1][1];
-    return 0;
-}

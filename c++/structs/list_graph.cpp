@@ -89,15 +89,3 @@ void Graph_l::print_edges(int edge) {
 int Graph_l::get_size() {
     return size;
 }
-
-int main() {
-    Graph_l graph(false, 4);
-    graph.add_edge(1,3);
-    graph.add_edge(0,2);
-    graph.add_edge(0,1);
-    graph.delete_edge(0,2);
-    graph.print();
-    graph.add_edge(0,2);
-    graph.print_edges(0);
-    return 0;
-}
