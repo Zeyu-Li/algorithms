@@ -6,7 +6,7 @@
 #include <vector>
 
 class Graph_l {
-    private:
+    protected:
         bool directed;
         // hash table list
         std::vector<int> *adj;

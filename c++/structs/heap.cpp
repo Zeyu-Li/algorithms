@@ -22,7 +22,7 @@ class Min_heap {
 
         // print
         void print();
-    private:
+    protected:
         int size;
         std::vector<int> heap;
 };

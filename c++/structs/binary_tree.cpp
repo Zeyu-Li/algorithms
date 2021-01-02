@@ -35,7 +35,7 @@ class Binary_tree {
 
         // searches and returns the node
         node *search(int value);
-    private:
+    protected:
         // root node
         node *root;
 

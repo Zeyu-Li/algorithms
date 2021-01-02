@@ -29,7 +29,7 @@ class Graph_m {
 
         // main matrix, therefore getter unnecessary
         std::vector<std::vector <int>> matrix;
-    private:
+    protected:
         int size;
         bool directed;
 };

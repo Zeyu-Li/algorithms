@@ -5,7 +5,7 @@
 #include <utility>
 
 class Graph {
-    private:
+    protected:
         int V, E;
 
         // pointer to vector containing adjacency list

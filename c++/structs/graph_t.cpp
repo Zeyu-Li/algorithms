@@ -6,7 +6,7 @@
 
 template<class T>
 class Graph {
-    private:
+    protected:
         // have no uses for now
         int V, E;
 

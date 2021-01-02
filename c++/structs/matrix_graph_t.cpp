@@ -31,7 +31,7 @@ class Graph_m {
 
         // main matrix, therefore getter unnecessary
         std::vector<std::vector <T>> matrix;
-    private:
+    protected:
         int size;
         bool directed;
 };

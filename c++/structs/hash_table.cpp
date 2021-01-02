@@ -17,23 +17,23 @@ class Hash_table {
             return num % size;
         }
 
-    public:
-    // contructor, n is number of rows
-    Hash_table(int n);
-    // destructor
-    ~Hash_table();
+    protected:
+        // contructor, n is number of rows
+        Hash_table(int n);
+        // destructor
+        ~Hash_table();
 
-    void insert_item(int item);
-    // inserting an array of numbers given size and array
-    void insert_items(int n, int arr[]);
-    // NOTE: only deletes first occurrence of item
-    void delete_item(int item);
+        void insert_item(int item);
+        // inserting an array of numbers given size and array
+        void insert_items(int n, int arr[]);
+        // NOTE: only deletes first occurrence of item
+        void delete_item(int item);
 
-    // prints
-    void print();
+        // prints
+        void print();
 
-    // getter
-    int get_size();
+        // getter
+        int get_size();
 };
 // contructor
 Hash_table::Hash_table(int n) {
