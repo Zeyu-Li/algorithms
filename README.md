@@ -58,6 +58,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 * GCD via Euclidean algorithm
 * LCM (least common multiple) uses GCD
+* Quick Square Root from [Quake III](https://www.youtube.com/watch?v=p8u_k2LIZyo&ab_channel=Nemean)
 * BFS O(log(V+E))
 
 ### Go

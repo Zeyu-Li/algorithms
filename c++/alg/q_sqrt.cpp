@@ -1,6 +1,5 @@
 // Quick Square Root (~1% accurancy)
 // from https://www.youtube.com/watch?v=p8u_k2LIZyo&ab_channel=Nemean
-#include <iostream>
 
 
 float q_sqrt(float num) {
