@@ -15,7 +15,7 @@ class Graph_l {
     public:
         // contructor, first arg directed or undirected, next is the number of vertices
         Graph_l(bool, int);
-        // overloads main contructor, default undirected
+        // overloads main contructor, default undirected, arg is the number of vertices
         Graph_l(int);
         // destructor
         ~Graph_l();
