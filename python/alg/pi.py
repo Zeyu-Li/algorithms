@@ -1,5 +1,8 @@
-# approximates pi with randomness
-# uses Monte Carlo
+"""
+Pi Approximator by Andrew Li
+approximates pi with randomness
+(uses Monte Carlo)
+"""
 
 import random
 
@@ -7,8 +10,9 @@ import random
 def distance(x, y):
     return (x ** 2 + y ** 2) ** .5
 
-def main():
-    n = int(input("Iteration count: "))
+def approximate(iterations):
+    # returns the approximate value of pi given the number of iterations
+    n = iterations
     approx = 0
     total = 0
     for i in range(n):
@@ -19,8 +23,11 @@ def main():
             total+=1
         approx = total/(i+1)
 
-    print(f"Pi is about {approx*4}")
-    return 0
+    return approx*4
+
+def main():
+    n = int(input("Iteration count: "))
+    print(f"Pi is about {approximate(n)}")
 
 if __name__ == "__main__":
     main()
