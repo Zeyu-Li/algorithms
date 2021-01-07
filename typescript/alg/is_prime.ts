@@ -1,3 +1,5 @@
+/* Is Prime */
+
 // chose any number
 let number: number = 146192364271;
 

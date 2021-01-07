@@ -1,4 +1,4 @@
-""" Stacks by: Zeyu Li """
+""" Stack """
 
 class Stack:
     """ implementation of of a stack """

@@ -1,3 +1,6 @@
+""" Doubly Linked List """
+
+
 class DLinkedListNode:
     # An instance of this class represents a node in Doubly-Linked List
     def __init__(self,initData,initNext,initPrevious):

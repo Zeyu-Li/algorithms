@@ -1,3 +1,5 @@
+/* Is Prime */
+
 package main
 
 import (

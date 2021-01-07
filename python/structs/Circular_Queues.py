@@ -1,4 +1,4 @@
-""" Circlar Queues, by: Zeyu Li """
+""" Circlar Queues """
 
 
 class CircularQueue:
