@@ -7,6 +7,7 @@
 #include "../alg/q_sqrt.cpp"
 #include "../alg/bfs.cpp"
 #include "../alg/dijkstra.cpp"
+#include "../alg/bellman_ford.cpp"
 
 using namespace std;
 
@@ -79,8 +80,40 @@ int main() {
     vector<int> d_path;
     Dijkstra.dijkstra(0, d_path);
     for(int i=0; i<d_path.size(); ++i) cout << i << ": " << d_path[i] << ' ' << endl;
-    cout << endl;
 
+    /* Bellman-Ford */
+    cout << "Bellman-Ford:" << endl;
+    Graph_bf B_f(5, 8);
+    B_f.add_edge(0, 1, -1);
+    B_f.add_edge(0, 2, 4);
+    B_f.add_edge(1, 2, 3);
+    B_f.add_edge(1, 3, 2);
+    B_f.add_edge(1, 4, 2);
+    B_f.add_edge(3, 2, 5);
+    B_f.add_edge(3, 1, 1);
+    B_f.add_edge(4, 3, -3);
+    
+    // will be same as previous if changed from undirected to directed
+    // Graph_bf B_f(9, 14);
+    // B_f.add_edge(0, 1, 4);
+    // B_f.add_edge(0, 7, 8);
+    // B_f.add_edge(1, 2, 8);
+    // B_f.add_edge(1, 7, 11);
+    // B_f.add_edge(2, 3, 7);
+    // B_f.add_edge(2, 5, 4);
+    // B_f.add_edge(2, 8, 2);
+    // B_f.add_edge(3, 4, 9);
+    // B_f.add_edge(3, 5, 14);
+    // B_f.add_edge(4, 5, 10);
+    // B_f.add_edge(5, 6, 2);
+    // B_f.add_edge(6, 7, 1);
+    // B_f.add_edge(6, 8, 6);
+    // B_f.add_edge(7, 8, 7);
+
+    vector<int> b_path;
+    // B_f.print();
+    B_f.bell_ford(0, b_path);
+    for(int i=0; i<b_path.size(); ++i) cout << i << ": " << b_path[i] << ' ' << endl;
 
     return 0;
 }

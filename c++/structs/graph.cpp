@@ -10,13 +10,14 @@
 class Graph {
     protected:
         int V, E;
+        bool final_e;
 
-        // pointer to vector containing adjacency list
+        // pointer to vector containing adjacency list (weight, (source, destination))
         std::vector<std::pair<int, std::pair<int, int>>> edges;
     public:
         // contructor
         Graph();
-        Graph(int V, int E);
+        Graph(int, int);
         // destructor not needed
         // ~Graph();
 
@@ -29,19 +30,23 @@ class Graph {
         void print();
 };
 
-Graph::Graph(int V, int E) {
-    this->V = V;
-    this->E = E;
+Graph::Graph(int vertex, int edges) {
+    V = vertex;
+    E = edges;
+    final_e = true;
 }
 Graph::Graph() {
     V = 0;
     E = 0;
+    final_e = false;
 }
 
 void Graph::add_edge(int start, int end) {
+    if (!final_e) E++;
     edges.push_back({1, {start, end}});
 }
 void Graph::add_edge(int start, int end, int weight) {
+    if (!final_e) E++;
     edges.push_back({weight, {start, end}});
 }
 
