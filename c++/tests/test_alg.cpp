@@ -1,5 +1,5 @@
 /* 
-* Tests by Andrew Li
+* Testing Algorithms
 * Description: A test for all the classes
 */ 
 #include <iostream>
@@ -7,6 +7,7 @@
 #include "../alg/q_sqrt.cpp"
 #include "../alg/bfs.cpp"
 #include "../alg/dijkstra.cpp"
+
 using namespace std;
 
 void print(int size, int arr[]) {

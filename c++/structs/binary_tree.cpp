@@ -1,9 +1,8 @@
 /*
-* Binary tree implementation 
+* Binary tree
 * Resource: https://gist.github.com/toboqus/def6a6915e4abd66e922
 */
 #include <iostream>
-
 
 // each node struct
 // can change it's value(s) below such that 

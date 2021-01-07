@@ -1,6 +1,6 @@
 /* 
-* Adjacency List Graph by Andrew Li
-* https://www.geeksforgeeks.org/graph-and-its-representations/ & from hash table
+* Adjacency List Graph
+* Modified from: https://www.geeksforgeeks.org/graph-and-its-representations/ & from hash table
 */ 
 #include <iostream>
 #include <vector>

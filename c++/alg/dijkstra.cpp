@@ -1,9 +1,8 @@
-/* Dijkstra's alg */ 
+/* Dijkstra's Algorithm */ 
 #include <vector>
 #include <algorithm>
 #include <limits.h> 
 #include "../structs/matrix_graph.cpp"
-
 
 class Graph_dijkstra: public Graph_m {
     public:

@@ -1,9 +1,8 @@
 /*
-* Binary tree implementation 
+* Binary Tree Template
 * Resource: https://gist.github.com/toboqus/def6a6915e4abd66e922
 */
 #include <iostream>
-
 
 // each node struct
 template<typename T>

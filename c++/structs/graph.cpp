@@ -1,5 +1,8 @@
-// regular graph representation as a array of pairs (source and desinations) and the weight
-// https://gist.github.com/MagallanesFito/791f736a0d21708794aafa11a0416201
+/*
+* Regular Graph
+* representation as a array of pairs (source and desinations) and the weight
+* Modifed from: https://gist.github.com/MagallanesFito/791f736a0d21708794aafa11a0416201
+*/
 #include <iostream>
 #include <vector>
 #include <utility>

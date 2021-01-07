@@ -1,6 +1,7 @@
-// Quick Square Root (~1% accurancy)
-// from https://www.youtube.com/watch?v=p8u_k2LIZyo&ab_channel=Nemean
-
+/*
+* Quick Square Root (~1% inaccuracy)
+* From https://www.youtube.com/watch?v=p8u_k2LIZyo&ab_channel=Nemean
+*/
 
 float q_sqrt(float num) {
     long address;

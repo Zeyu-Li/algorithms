@@ -1,10 +1,9 @@
-/* bfs by Andrew Li */ 
+/* BFS */ 
 #include "../structs/list_graph.cpp"
 #include <climits>
 #include <queue>
 #include <vector>
 #include <algorithm>
-
 
 class Graph_bfs: public Graph_l {
     protected:

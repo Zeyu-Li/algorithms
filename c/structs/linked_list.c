@@ -1,4 +1,5 @@
-/* Singly Linked List by Andrew Li
+/* 
+* Singly Linked List by Andrew Li
 * functions include init_list, push, free, print_list, print
 */ 
 #include <stdio.h>

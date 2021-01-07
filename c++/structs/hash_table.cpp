@@ -1,9 +1,6 @@
-/* 
-* Hash Table by Andrew Li
-*/ 
+/* Hash Table */
 #include <iostream>
 #include <list>
-
 
 class Hash_table {
     protected: 

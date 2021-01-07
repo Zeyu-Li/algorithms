@@ -1,11 +1,12 @@
 /* 
-* Tests by Andrew Li
+* Testing Template Structs
 * Description: A test for all the classes
 */ 
 #include <iostream>
 #include "../structs/binary_tree_t.cpp"
 #include "../structs/graph_t.cpp"
 #include "../structs/matrix_graph_t.cpp"
+
 using namespace std;
 
 int main() {

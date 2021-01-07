@@ -1,5 +1,5 @@
 /* 
-* Tests by Andrew Li
+* Testing Structs
 * Description: A test for all the classes
 */ 
 #include <iostream>
@@ -9,6 +9,7 @@
 #include "../structs/graph.cpp"
 #include "../structs/list_graph.cpp"
 #include "../structs/matrix_graph.cpp"
+
 using namespace std;
 
 int main() {

@@ -1,6 +1,4 @@
-/* 
-* Heaps by Andrew Li
-*/ 
+/* Heaps */ 
 #include <iostream>
 #include <algorithm>
 #include <vector>

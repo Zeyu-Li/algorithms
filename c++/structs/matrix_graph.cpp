@@ -1,7 +1,9 @@
+/* 
+* Matrix/Table Graph
+* Modified from: https://github.com/DorianDepriester/adjacencyMatrix
+*/
 #include <iostream>
 #include <vector>
-
-// help from https://github.com/DorianDepriester/adjacencyMatrix
 
 class Graph_m {
     public:
