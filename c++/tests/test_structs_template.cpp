@@ -1,6 +1,6 @@
 /* 
 * Testing Template Structs
-* Description: A test for all the classes
+* Description: A test for all the template struct classes
 */ 
 #include <iostream>
 #include "../structs/binary_tree_t.cpp"

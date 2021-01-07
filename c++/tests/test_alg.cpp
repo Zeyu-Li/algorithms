@@ -1,6 +1,6 @@
 /* 
 * Testing Algorithms
-* Description: A test for all the classes
+* Description: A test for all the algorithm classes
 */ 
 #include <iostream>
 #include "../alg/lcm.cpp"
