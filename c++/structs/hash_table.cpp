@@ -6,7 +6,7 @@
 
 
 class Hash_table {
-    private: 
+    protected: 
         // number of rows
         int size;
         // container
@@ -17,7 +17,7 @@ class Hash_table {
             return num % size;
         }
 
-    protected:
+    public:
         // contructor, n is number of rows
         Hash_table(int n);
         // destructor
