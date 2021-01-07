@@ -1,7 +1,4 @@
-/* 
-* bfs by Andrew Li
-*/ 
-#include <iostream>
+/* bfs by Andrew Li */ 
 #include "../structs/list_graph.cpp"
 #include <climits>
 #include <queue>
@@ -16,16 +13,20 @@ class Graph_bfs: public Graph_l {
         // inheritance
         Graph_bfs(bool a, int b): Graph_l(a, b){};
         Graph_bfs(int b): Graph_l(b){};
-        // BFS, given starting node
-        void bfs(int);
+        // BFS, given starting node, returns vector of ints
+        std::vector<int> bfs(int);
+        // stores bfs order in second arg, a vector of int, no returns
+        void bfs(int, std::vector<int>&);
         // returns shortest length path given start and end node
         int bfs(int, int);
         // returns shortest path length and stores the path in an 
         // vector given by the third arg in the order of source node to end node 
         int bfs_path(int, int, std::vector<int>&);
+        // returns the shortest path as a vector
+        std::vector<int> bfs_path(int, int);
 };
 
-void Graph_bfs::bfs(int start) {
+void Graph_bfs::bfs(int start, std::vector<int>&path) {
     std::vector<bool> visited(size);
     std::fill_n(visited.begin(), size, false);
     // might as well use vectors
@@ -44,7 +45,7 @@ void Graph_bfs::bfs(int start) {
         // sets new node as first in queue
         start = list.front();
         // prints order
-        std::cout << start << " ";
+        path.push_back(start);
         // dequeues
         list.pop();
 
@@ -56,7 +57,12 @@ void Graph_bfs::bfs(int start) {
             }
         }
     }
-    std::cout << std::endl;
+}
+
+std::vector<int> Graph_bfs::bfs(int start) {
+    std::vector<int> path;
+    bfs(start, path);
+    return path;
 }
 
 int Graph_bfs::bfs(int start, int end) {
