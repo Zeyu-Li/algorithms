@@ -1,3 +1,5 @@
+/* LCM - Lowest Common Multiple */ 
+
 #include "gcd.cpp"
 
 int lcd(int gcd, int a, int b) {
