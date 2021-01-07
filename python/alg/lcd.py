@@ -1,6 +1,4 @@
-""""
-lcd (lowest common denominator) by Andrew Li
-"""
+"""" LCD (lowest common denominator) """
 
 def lcd(gcd, int1, int2):
     return int((int1*int2)/gcd)

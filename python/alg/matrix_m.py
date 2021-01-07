@@ -1,5 +1,5 @@
 '''
-Naive Matrix Multiple by Andrew Li
+Naive Matrix Multiple
 Description: based on https://github.com/Zeyu-Li/matrix_multiplication/blob/master/src/matrix_multiplication.cpp
 '''
 

@@ -1,5 +1,5 @@
 '''
-Strassen's Matrix Multiplication by Andrew Li
+Strassen's Matrix Multiplication
 Description: based on https://www.geeksforgeeks.org/strassens-matrix-multiplication/ and 
 https://github.com/stanislavkozlovski/Algorithms/blob/master/Coursera/algorithms_stanford/Strassen%20Matrix%20Multiplication/python/strassen.py
 '''

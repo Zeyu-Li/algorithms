@@ -1,6 +1,4 @@
-""""
-gcd (greatest common divisor) by Andrew Li
-"""
+""" GCD (greatest common divisor) """
 
 def gcd(int1, int2):
     if int2 == 0:
