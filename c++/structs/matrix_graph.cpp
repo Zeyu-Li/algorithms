@@ -4,12 +4,14 @@
 */
 #include <iostream>
 #include <vector>
+// remove if necessary
+#pragma once
 
 class Graph_m {
     public:
         // contructors, default undirected
         Graph_m();
-        // contructor with directness boolean 
+        // contructor with directness boolean, true means directed 
         Graph_m(bool);
         // contructor with size (number of vertices)
         Graph_m(int);
@@ -110,7 +112,7 @@ void Graph_m::print(void) {
     int n = size;
     for (int i=0;i<n;i++) {
         for (int j=0;j<n;j++) {
-            std::cout << matrix[i][j]<< "\t";
+            std::cout << matrix[i][j] << '\t';
         }
         std::cout << std::endl;
     }

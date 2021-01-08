@@ -1,7 +1,5 @@
 /* Bellman-Ford */ 
-#include <iostream>
 #include <vector>
-#include <iostream>
 #include <limits.h>
 #include "../structs/graph.cpp"
 
