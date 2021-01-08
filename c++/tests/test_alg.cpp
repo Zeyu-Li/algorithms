@@ -3,11 +3,13 @@
 * Description: A test for all the algorithm classes
 */ 
 #include <iostream>
+#include <limits.h>
 #include "../alg/lcm.cpp"
 #include "../alg/q_sqrt.cpp"
 #include "../alg/bfs.cpp"
 #include "../alg/dijkstra.cpp"
 #include "../alg/bellman_ford.cpp"
+#include "../alg/floyd_warshall.cpp"
 
 using namespace std;
 
@@ -92,7 +94,7 @@ int main() {
     B_f.add_edge(3, 2, 5);
     B_f.add_edge(3, 1, 1);
     B_f.add_edge(4, 3, -3);
-    
+
     // will be same as previous if changed from undirected to directed
     // Graph_bf B_f(9, 14);
     // B_f.add_edge(0, 1, 4);
@@ -114,6 +116,28 @@ int main() {
     // B_f.print();
     B_f.bell_ford(0, b_path);
     for(int i=0; i<b_path.size(); ++i) cout << i << ": " << b_path[i] << ' ' << endl;
+
+    /* Floyd-Warshall */
+    cout << "Floyd-Warshall:" << endl;
+    int size_f = 4;
+    Graph_fw F_w(size_f);
+    F_w.add_edge(0, 1, 5);
+    F_w.add_edge(0, 3, 10);
+    F_w.add_edge(1, 2, 3);
+    F_w.add_edge(2, 3, 1);
+
+    vector<vector<int>> f_path;
+    F_w.floyd_warshall(f_path);
+    for (int i=0;i<size_f;i++) {
+        for (int j=0;j<size_f;j++) {
+            if (f_path[i][j] == INF) {
+                cout << "INF" << '\t';
+            } else {
+                cout << f_path[i][j]<< "\t";
+            }
+        }
+        cout << endl;
+    }
 
     return 0;
 }
