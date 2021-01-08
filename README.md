@@ -58,14 +58,14 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 * GCD via Euclidean algorithm
 * LCM (least common multiple) uses GCD
-* Quick Square Root from [Quake III](https://www.youtube.com/watch?v=p8u_k2LIZyo&ab_channel=Nemean)
-* BFS - Breath first search O(V+E)
+* BFS - Breath first search (+ shortest path) O(V+E)
 * DFS - Depth first search O(V+E)
 * Dijkstra's Algorithm - Shortest path O(V^2)
 * Bellman-Ford - Shortest path (dp) O(E*V)
 * Floyd-Warshall - Shortest path for all pairs of points O(V^3)
-* Kruskal's Algorithm - Minimum spanning tree O(ElogE)
+* Kruskal's Algorithm - Minimum spanning tree O(E log E)
 * Prim's Algorithm - Minimum spanning tree O(V^2)
+* Quick Square Root from [Quake III](https://www.youtube.com/watch?v=p8u_k2LIZyo&ab_channel=Nemean)
 
 ### Go
 
