@@ -12,6 +12,7 @@
 #include "../alg/floyd_warshall.cpp"
 #include "../alg/kruskal_node.cpp"
 #include "../alg/kruskal_matrix.cpp"
+#include "../alg/prim.cpp"
 
 using namespace std;
 
@@ -164,6 +165,19 @@ int main() {
     // Kruskal_m.print();
     Kruskal_m.kruskal();
     Kruskal_m.print_mst();
+
+    /* Prim's Algorithm */
+    cout << "Prim:" << endl;
+    Graph_prim Prim(false, 4);
+    Prim.add_edge(0, 1, 10);
+    Prim.add_edge(0, 2, 6);
+    Prim.add_edge(0, 3, 5);
+    Prim.add_edge(1, 3, 15);
+    Prim.add_edge(2, 3, 4);
+
+    // Kruskal_m.print();
+    Prim.prim();
+    Prim.print_mst();
 
     return 0;
 }
