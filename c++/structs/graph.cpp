@@ -6,6 +6,8 @@
 #include <iostream>
 #include <vector>
 #include <utility>
+// remove if necessary
+#pragma once
 
 class Graph {
     protected:

@@ -10,6 +10,8 @@
 #include "../alg/dijkstra.cpp"
 #include "../alg/bellman_ford.cpp"
 #include "../alg/floyd_warshall.cpp"
+#include "../alg/kruskal_node.cpp"
+#include "../alg/kruskal_matrix.cpp"
 
 using namespace std;
 
@@ -138,6 +140,30 @@ int main() {
         }
         cout << endl;
     }
+    /* Kruskal (edged based) */
+    cout << "Kruskal (edged based):" << endl;
+    Graph_kruskal_n Kruskal(4, 5);
+    Kruskal.add_edge(0, 1, 10);
+    Kruskal.add_edge(0, 2, 6);
+    Kruskal.add_edge(0, 3, 5);
+    Kruskal.add_edge(1, 3, 15);
+    Kruskal.add_edge(2, 3, 4);
+
+    Kruskal.kruskal();
+    Kruskal.print_mst();
+
+    /* Kruskal (matrix based) */
+    cout << "Kruskal (matrix based):" << endl;
+    Graph_kruskal_m Kruskal_m(false, 4);
+    Kruskal_m.add_edge(0, 1, 10);
+    Kruskal_m.add_edge(0, 2, 6);
+    Kruskal_m.add_edge(0, 3, 5);
+    Kruskal_m.add_edge(1, 3, 15);
+    Kruskal_m.add_edge(2, 3, 4);
+
+    // Kruskal_m.print();
+    Kruskal_m.kruskal();
+    Kruskal_m.print_mst();
 
     return 0;
 }
