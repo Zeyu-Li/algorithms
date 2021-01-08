@@ -4,6 +4,9 @@
 */ 
 #include <iostream>
 #include <vector>
+// remove if necessary
+#pragma once
+
 
 class Graph_l {
     protected:
