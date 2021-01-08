@@ -2,11 +2,11 @@
 * Testing Algorithms
 * Description: A test for all the algorithm classes
 */ 
-#include <iostream>
 #include <limits.h>
 #include "../alg/lcm.cpp"
 #include "../alg/q_sqrt.cpp"
 #include "../alg/bfs.cpp"
+#include "../alg/dfs.cpp"
 #include "../alg/dijkstra.cpp"
 #include "../alg/bellman_ford.cpp"
 #include "../alg/floyd_warshall.cpp"
@@ -38,22 +38,22 @@ int main() {
     /* BFS */
     cout << "BFS:" << endl;
     int size = 8;
-    Graph_bfs graph_l(true, size);
-    graph_l.add_edge(0, 1);
-    graph_l.add_edge(0, 3);
-    graph_l.add_edge(1, 2);
-    graph_l.add_edge(3, 4);
-    graph_l.add_edge(3, 7);
-    graph_l.add_edge(4, 5);
-    graph_l.add_edge(4, 7);
-    graph_l.add_edge(5, 6);
-    graph_l.add_edge(6, 7);
+    Graph_bfs Bfs(true, size);
+    Bfs.add_edge(0, 1);
+    Bfs.add_edge(0, 3);
+    Bfs.add_edge(1, 2);
+    Bfs.add_edge(3, 4);
+    Bfs.add_edge(3, 7);
+    Bfs.add_edge(4, 5);
+    Bfs.add_edge(4, 7);
+    Bfs.add_edge(5, 6);
+    Bfs.add_edge(6, 7);
     int source = 0, dest = 7;
     vector<int> path_bfs1;
     vector<int> path_bfs2;
-    // graph_l.print();
-    graph_l.bfs(source, path_bfs1);
-    cout << "Length: " << graph_l.bfs_path(source, dest, path_bfs2) << endl;
+    // Bfs.print();
+    Bfs.bfs(source, path_bfs1);
+    cout << "Length: " << Bfs.bfs_path(source, dest, path_bfs2) << endl;
 
     // print
     cout << "BFS order: ";
@@ -61,6 +61,23 @@ int main() {
     cout << endl;
     cout << "Shortest path: ";
     for(int i=0; i<path_bfs2.size(); ++i) cout << path_bfs2[i] << ' ';
+    cout << endl;
+
+    cout << "DFS:" << endl;
+    Graph_dfs Dfs(true, 4);
+    Dfs.add_edge(0, 1);
+    Dfs.add_edge(0, 2);
+    Dfs.add_edge(1, 2);
+    Dfs.add_edge(2, 0);
+    Dfs.add_edge(2, 3);
+    Dfs.add_edge(3, 3);
+    // Dfs.print();
+    vector<int> path_dfs1;
+    vector<int> path_dfs2;
+    Dfs.dfs(2, path_dfs1);
+    // print
+    cout << "DFS order: ";
+    for(int i=0; i<path_dfs1.size(); ++i) cout << path_dfs1[i] << ' ';
     cout << endl;
 
     /* Dijkstra */
@@ -175,7 +192,7 @@ int main() {
     Prim.add_edge(1, 3, 15);
     Prim.add_edge(2, 3, 4);
 
-    // Kruskal_m.print();
+    // Prim.print();
     Prim.prim();
     Prim.print_mst();
 
