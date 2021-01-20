@@ -29,3 +29,4 @@ Sourced: https://github.com/CoreyMSchafer/code_snippets/blob/master/Regular-Expr
 
 \* Note captured group and be recombined with the **#** followed by the group number
 
+To test out regex use [regex101.com](https://regex101.com/)

@@ -75,6 +75,15 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 * Is prime
 
+## Sorting
+
+### Python
+
+* Insertion O(n^2)
+* Bubble O(n^2)
+* Merge O(nlogn)
+* Quick O(nlogn)
+
 ## Concepts
 
 ### Greedy
