@@ -136,6 +136,8 @@ Can be copied and pasted directly to the file or drag in the file and be include
 
 ## Licence
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
+
 The rules for copy and distributing this project licence are 
 outlined in the licence.txt file.
 
