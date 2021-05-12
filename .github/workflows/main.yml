@@ -1,0 +1,23 @@
+# see https://github.com/BaileyJM02/markdown-to-pdf
+# CANNOT DO INLINE LATEX :(
+
+name: Test C++
+on: 
+  push:
+    branches:
+      - master
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+
+jobs:
+  toPDF:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: C++ Tests
+        working-directory: c++/tests/
+        run: |
+        chmod +x ./test.sh
+        ./test.sh
