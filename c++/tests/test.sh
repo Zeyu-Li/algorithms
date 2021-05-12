@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Testing:"
+echo "Testing: "
 g++ test_structs.cpp -o test_structs && ./test_structs > test1.out
 g++ test_structs_template.cpp -o test_structs_template && ./test_structs_template > test2.out
 g++ test_alg.cpp -o test_alg && ./test_alg > test3.out
