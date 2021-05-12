@@ -13,13 +13,12 @@ jobs:
   CPP_TESTS:
     name: Test C++
     runs-on: ubuntu-latest
-             compiler: gcc
-             gcc: 9
     steps:
       - uses: actions/checkout@v2
 
       - name: C++ Tests
         working-directory: c++/tests/
         run: |
+          gcc --version
           chmod +x ./test.sh
           ./test.sh
