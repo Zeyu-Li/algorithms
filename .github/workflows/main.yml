@@ -19,5 +19,5 @@ jobs:
       - name: C++ Tests
         working-directory: c++/tests/
         run: |
-        chmod +x ./test.sh
-        ./test.sh
+          chmod +x ./test.sh
+          ./test.sh
