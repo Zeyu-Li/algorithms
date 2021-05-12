@@ -21,6 +21,8 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 ### C++
 
+![badge](https://github.com/Zeyu-Li/algorithms/workflows/Test%20C++/badge.svg)
+
 **Included in STL**
 
 * Stack
