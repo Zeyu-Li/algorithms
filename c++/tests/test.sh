@@ -10,6 +10,7 @@ diff test3.out test_alg.out >> diff.out
 
 if [ -s diff.out ] # test if diff is empty
 then
+    cat diff.out # print
     exit 1 # test failed
 fi
 
