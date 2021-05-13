@@ -29,7 +29,7 @@ int main() {
     // must set overload to public to do the thing below
     // tree->post_order(find);
 
-    delete &tree;
+    // delete tree;
 
     /* graph */
     cout << "Graph:" << endl;
