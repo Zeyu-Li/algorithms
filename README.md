@@ -63,6 +63,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * BFS - Breath first search (+ shortest path) O(V+E)
 * DFS - Depth first search O(V+E)
 * Dijkstra's Algorithm - Shortest path O(V^2)
+* A Star Search - Shortest path O(V^2)
 * Bellman-Ford - Shortest path (dp) O(E*V)
 * Floyd-Warshall - Shortest path for all pairs of points O(V^3)
 * Kruskal's Algorithm - Minimum spanning tree O(E log E)
