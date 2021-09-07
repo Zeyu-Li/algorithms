@@ -3,6 +3,7 @@
 * Description: A test for all the algorithm classes
 */ 
 #include <limits.h>
+#include "../alg/a_star.cpp"
 #include "../alg/lcm.cpp"
 #include "../alg/q_sqrt.cpp"
 #include "../alg/bfs.cpp"
@@ -100,8 +101,62 @@ int main() {
 
     // Dijkstra.print();
     vector<int> d_path;
-    Dijkstra.dijkstra(0, d_path);
+    Dijkstra.dijkstra(0, 1, d_path);
     for(int i=0; i<d_path.size(); ++i) cout << i << ": " << d_path[i] << ' ' << endl;
+
+    /* A Star */
+    cout << "A Star (A*) [g-score]:" << endl;
+    Graph_a_star A_Star(false, 9);
+    A_Star.add_edge(0, 1, 4);
+    A_Star.add_edge(0, 7, 8);
+    A_Star.add_edge(1, 2, 8);
+    A_Star.add_edge(1, 7, 11);
+    A_Star.add_edge(2, 3, 7);
+    A_Star.add_edge(2, 5, 4);
+    A_Star.add_edge(2, 8, 2);
+    A_Star.add_edge(3, 4, 9);
+    A_Star.add_edge(3, 5, 14);
+    A_Star.add_edge(4, 5, 10);
+    A_Star.add_edge(5, 6, 2);
+    A_Star.add_edge(6, 7, 1);
+    A_Star.add_edge(6, 8, 6);
+    A_Star.add_edge(7, 8, 7);
+
+    // defining postions
+    vector<pair<int, int>> postions;
+    postions.emplace_back(0, 0);
+    postions.emplace_back(0, 0);
+    postions.emplace_back(0, 0);
+    postions.emplace_back(0, 0);
+    postions.emplace_back(0, 0);
+    postions.emplace_back(0, 0);
+    postions.emplace_back(0, 0);
+    postions.emplace_back(0, 0);
+    postions.emplace_back(100, 100);
+
+    vector<pair<int, int>> postions1;
+    postions1.emplace_back(0, 0);
+    postions1.emplace_back(73, 82);
+    postions1.emplace_back(34, 70);
+    postions1.emplace_back(7, 4);
+    postions1.emplace_back(5, 36);
+    postions1.emplace_back(0, 80);
+    postions1.emplace_back(5, 50);
+    postions1.emplace_back(100, 100);
+    postions1.emplace_back(100, 5);
+
+    A_Star.define_positions(postions1);
+    
+    // Dijkstra.print();
+    vector<int> d_path_2;
+    A_Star.a_star(0, 8, d_path_2);
+    for(int i=0; i<d_path_2.size(); ++i) cout << i << ": " << d_path_2[i] << ' ' << endl;
+    
+    cout << "A Star (A*) [f-score]:" << endl;
+    vector<int> d_path_3;
+    A_Star.debug = true;
+    A_Star.a_star(0, 8, d_path_3);
+    for(int i=0; i<d_path_3.size(); ++i) cout << i << ": " << d_path_3[i] << ' ' << endl;
 
     /* Bellman-Ford */
     cout << "Bellman-Ford:" << endl;
