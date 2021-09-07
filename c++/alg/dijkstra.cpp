@@ -55,6 +55,9 @@ std::vector<int> Graph_dijkstra::dijkstra(int start) {
                 dist[v] = dist[u] + matrix[u][v];
             }
         }
+        
+        // breaks early
+        // if (u == end) break;
     }
     // return the distances of all nodes
     return dist;

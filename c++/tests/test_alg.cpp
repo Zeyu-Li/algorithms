@@ -101,7 +101,7 @@ int main() {
 
     // Dijkstra.print();
     vector<int> d_path;
-    Dijkstra.dijkstra(0, 1, d_path);
+    Dijkstra.dijkstra(0, d_path);
     for(int i=0; i<d_path.size(); ++i) cout << i << ": " << d_path[i] << ' ' << endl;
 
     /* A Star */
