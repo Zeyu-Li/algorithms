@@ -1,4 +1,10 @@
-/* A Star (A*, aka Dijkstra++) Algorithm */ 
+/* 
+* A Star (A*, aka Dijkstra++) Algorithm
+* using 2D euclidean distance
+*
+* Note A Star does not guaranteed to be the shortest path, 
+* just a more time efficient solution 
+*/ 
 #include <algorithm>
 #include <limits.h> 
 #include "../structs/matrix_graph.cpp"
@@ -10,14 +16,19 @@ class Graph_a_star: public Graph_m {
         Graph_a_star(int a): Graph_m(a) {};
         Graph_a_star(bool a, int b): Graph_m(a, b) {};
         // returns a vector of the result of a star's alg
-        std::vector<int> a_star(int);
+        std::vector<int> a_star(int, int);
         // stores a_star results in second argument
-        void a_star(int, std::vector<int>&);
+        void a_star(int, int, std::vector<int>&);
         // returns shortest path given start and end
-        int a_star(int, int);
+        int a_star_length(int, int);
+
+        // pass in a list of form [int node, [int x, int y]] and will be copied not as an instance
+        void define_positions(std::vector<std::pair<int, std::pair<int, int>>>);
     private:
         // gets min distance
         int min_dist(std::vector<int>&, std::vector<bool>&);
+        std::vector<std::pair<int, std::pair<int, int>>> positions;
+        
 };
 
 
@@ -37,7 +48,7 @@ int Graph_a_star::min_dist(std::vector<int>& dist, std::vector<bool>& shortest_p
 }
 
 
-std::vector<int> Graph_a_star::a_star(int start) {
+std::vector<int> Graph_a_star::a_star(int start, int end) {
     std::vector<int> dist(size); // shortest path distance of each point
     std::fill_n(dist.begin(), size, INT_MAX);
     std::vector<bool> shortest_path(size);
@@ -58,19 +69,30 @@ std::vector<int> Graph_a_star::a_star(int start) {
                 dist[v] = dist[u] + matrix[u][v];
             }
         }
+        // ends early
+        if (u == end) break;
     }
+    
     // return the distances of all nodes
     return dist;
 }
 
-void Graph_a_star::a_star(int start, std::vector<int>&path) {
-    std::vector<int> d_path = a_star(start);
+void Graph_a_star::a_star(int start, int end, std::vector<int>&path) {
+    std::vector<int> d_path = a_star(start, end);
     // copy vectors
     for(int i=0; i<d_path.size(); ++i) path.push_back(d_path[i]);
 }
 
-int Graph_a_star::a_star(int start, int end) {
-    std::vector<int> d_path = a_star(start);
+/// defines all the positions in 1 function
+/// pass in a list of form [int node, [int x, int y]] 
+/// will be copied
+void Graph_a_star::define_positions(std::vector<std::pair<int, std::pair<int, int>>> positions) {
+    // copy vectors
+    this->positions = positions;
+}
+
+int Graph_a_star::a_star_length(int start, int end) {
+    std::vector<int> d_path = a_star(start, end);
     // return length of shortest path
-    return d_path[end];
+    return d_path.size();
 }
