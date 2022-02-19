@@ -9,6 +9,8 @@ from sort.bubble import bubbleSort
 from sort.insertion import insertionSort
 from sort.merge import mergeSort
 from sort.quick import quickSort
+from sort.count import count_sort
+from sort.radix import radix_sort
 
 empty = []
 _sorted = [1,2,3,4,5,6]
@@ -43,6 +45,10 @@ def main():
     helper2(quickSort)
     print("Merge")
     helper2(mergeSort)
+    print("Count")
+    helper(count_sort)
+    print("Radix")
+    helper(radix_sort)
 
     print("All tests passed")
     return 0

@@ -86,6 +86,8 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * Bubble O(n^2)
 * Merge O(nlogn)
 * Quick O(nlogn)
+* Count O(n+k)
+* Radix O(n)
 
 ## Concepts
 
