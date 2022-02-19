@@ -1,12 +1,12 @@
 # Quick Algorithms or Formulas
 
+[![Testing](https://github.com/Zeyu-Li/algorithms/actions/workflows/main.yml/badge.svg)](https://github.com/Zeyu-Li/algorithms/actions/workflows/main.yml)
+
 ## About
 
 This is a collection of algorithms, formulas, or  written in different programing languages
 
 ## ADT
-
-![badge](https://github.com/Zeyu-Li/algorithms/workflows/Python%20Tests/badge.svg)
 
 ### Python
 
@@ -22,8 +22,6 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 
 ### C++
-
-![badge](https://github.com/Zeyu-Li/algorithms/workflows/C++%20Tests/badge.svg)
 
 **Included in STL**
 
