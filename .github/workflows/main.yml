@@ -1,7 +1,7 @@
 # see https://github.com/BaileyJM02/markdown-to-pdf
 # CANNOT DO INLINE LATEX :(
 
-name: Test C++
+name: Testing
 on: 
   push:
     branches:
