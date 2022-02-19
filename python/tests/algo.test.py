@@ -6,7 +6,8 @@ sys.path.insert(0, os.path.abspath('..'))
 
 from alg.gcd import gcd
 from alg.lcd import lcm
-from alg.matrix_m import multiply_matrix, pp_matrix, generate_matrix
+from alg.matrix_m import multiply_matrix
+from alg.util import pp_matrix, generate_matrix
 from alg.strassen_m import strassen
 from alg.pi import approximate
 

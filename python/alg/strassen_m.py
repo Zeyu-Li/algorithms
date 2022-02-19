@@ -92,27 +92,3 @@ def strassen_helper(matrix1, matrix2):
     for i in range(len(bot_right)):
         new_matrix.append(bot_left[i] + bot_right[i])
     return new_matrix
-
-def pp_matrix(matrix):
-    # pretty prints matrix
-    for row in matrix:
-        print(", ".join(map(str, row)))
-
-def main():
-    # debug
-    # a = [[30, 95, 23],[53, 14, 62],[100, 20, 89]]
-    a = [[30, 95, 23],[53, 14, 62],[100, 20, 89],[100, 20, 89]]
-    b = [[24, 23, 32],[74, 38, 30],[91, 88, 6]]
-
-    pp_matrix(a)
-    print()
-    pp_matrix(b)
-
-    matrix = strassen(a,b)
-
-    print()
-    pp_matrix(matrix)
-    return 0
-
-if __name__ == "__main__":
-    main()
