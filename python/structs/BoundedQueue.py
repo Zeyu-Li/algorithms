@@ -1,9 +1,9 @@
-""" Stack """
+""" Bounded Queues """
 
-class Stack:
-    """ implementation of of a stack """
+
+class Queue:
+    """ a queue structure """
     def __init__(self):
-        """ inits """
         self.items = []
     
     def __str__(self):
@@ -21,30 +21,34 @@ class Stack:
         """ defines stack 
         - items must be a list
         """
-        if items is list:
+        if isinstance(items, list):
             self.items = items
         else:
             raise ValueError("Not a list")
     
     def push(self, item):
-        """ c-like push """
-        self.items.append(item)
+        """ c++ push """
+        self.items.insert(0, item)
+    
+    def enqueue(self, item):
+        """ c++ push """
+        self.items.insert(0, item)
     
     def pop(self):
         """ pop from queue """
         if len(self.items) == 0:
-            raise Exception("The list is empty")
+            raise Exception("The queue is empty")
         return self.items.pop()
     
     def peek(self):
         """ looks at first element in queue """
         if len(self.items) == 0:
-            raise Exception("The list is empty")
+            raise Exception("The queue is empty")
         return self.items[len(self.items)-1] 
     
     def isEmpty(self):
         """ checks to see if it is empty """
-        return self.size() == 0
+        return self.items == []
     
     def size(self):
         """ looks at length/size queue """

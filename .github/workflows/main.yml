@@ -9,9 +9,10 @@ on:
 env:
   GITHUB_TOKEN: ${{ github.token }}
 
+# run in parallel
 jobs:
   CPP_TESTS:
-    name: Test C++
+    name: C++ Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,3 +22,17 @@ jobs:
         run: |
           chmod +x ./test.sh
           ./test.sh
+  PYTHON_TESTS:
+    name: Python Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: execute python tests
+        working-directory: python/tests/
+        run: |
+          chmod +x ./test.sh
+          ./test.sh
+

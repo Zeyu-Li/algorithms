@@ -6,6 +6,8 @@ This is a collection of algorithms, formulas, or  written in different programin
 
 ## ADT
 
+![badge](https://github.com/Zeyu-Li/algorithms/workflows/Python%20Tests/badge.svg)
+
 ### Python
 
 * Stack [O(1) constant]
@@ -21,7 +23,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 
 ### C++
 
-![badge](https://github.com/Zeyu-Li/algorithms/workflows/Test%20C++/badge.svg)
+![badge](https://github.com/Zeyu-Li/algorithms/workflows/C++%20Tests/badge.svg)
 
 **Included in STL**
 
