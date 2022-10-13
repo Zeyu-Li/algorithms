@@ -10,6 +10,7 @@ from alg.matrix_m import multiply_matrix
 from alg.util import pp_matrix, generate_matrix
 from alg.strassen_m import strassen
 from alg.pi import approximate
+from alg.powerset import powerset
 
 def main():
     print("GCD")
@@ -38,6 +39,10 @@ def main():
     print("Pi approximator")
     approx = approximate(1000)
     assert 3 < approx < 3.25, "Pi approx is not close enough"
+
+    print("Power set")
+    assert powerset([1,2,3,4]) == [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3], [4], [1, 4], [2, 4], [1, 2, 4], [3, 4], [1, 3, 4], [2, 3, 4], [1, 2, 3, 4]]
+    assert powerset('acd') == [[], ['a'], ['c'], ['a', 'c'], ['d'], ['a', 'd'], ['c', 'd'], ['a', 'c', 'd']]
 
     print("All tests passed")
     return 0

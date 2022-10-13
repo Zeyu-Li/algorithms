@@ -55,6 +55,7 @@ The next two have a node (SLinkedListNode or DLinkedListNode) and the implementa
 * Pi Approximator via Monte Carlo
 * Matrix Multiplication O(n^3)
 * Strassen's Matrix Multiplication ~O(n^2.81) (less precise than the one above)
+* Power set ~O(n * 2^n) (Generates a power set given iterator)
 
 ### C++
 
